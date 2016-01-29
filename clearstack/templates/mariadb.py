@@ -33,7 +33,7 @@ if util.str2bool(conf['CONFIG_MARIADB_INSTALL']):
     mariadb.start_server()
     mariadb.secure_installation(mariadb_user, mariadb_pw)
 
-databases = ['keystone', 'glance', 'nova', 'neutron', 'heat']
+databases = ['keystone', 'glance', 'nova', 'neutron', 'heat', 'sahara']
 
 for database in databases:
     if database == 'keystone' or util.str2bool(conf['CONFIG_%s_INSTALL'

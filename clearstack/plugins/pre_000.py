@@ -144,6 +144,13 @@ def init_config():
                      "CONFIG_SWIFT_INSTALL",
                      "n",
                      options=['y', 'n'],
+                     validators=[validators.y_or_n]),
+            Argument("sahara-install",
+                     "Set 'y' if you would like Clearstack to install"
+                     " Openstack Data Processing (sahara)",
+                     "CONFIG_SAHARA_INSTALL",
+                     "n",
+                     options=['y', 'n'],
                      validators=[validators.y_or_n])
         ]
     }
